@@ -9,3 +9,37 @@ export default function Home() {
     </div>
   )
 }
+
+export async function getStaticProps(){
+  
+  var res = await fetch('https://app-nuisible.herokuapp.com/api/rappels',{
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+  "data": {
+    "title": "Hello",
+    "relation": 2,
+    "relations": [2, 4],
+    "link": {
+      "id": 1,
+      "type": "abc"
+    }
+  }
+})
+  })
+  
+ var data = await data.json()
+ 
+ 
+ return{
+ props:{
+ data:data}
+ }
+ 
+
+
+
+}
