@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home(props) {
   console.log(props)
+  alert(4)
   return (
     <div className={styles.container}>
     
