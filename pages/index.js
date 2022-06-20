@@ -22,13 +22,10 @@ export async function getStaticProps(){
     },
     body: JSON.stringify({
   "data": {
-    "title": "Hello",
-    "relation": 2,
-    "relations": [2, 4],
-    "link": {
-      "id": 1,
-      "type": "abc"
-    }
+    "date": "01/01/2022",
+    "heure": "00h00",
+
+
   }
 })
   })
